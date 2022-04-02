@@ -4,7 +4,7 @@
 
 ## About
 
-This is a script to draw a JPG onto r/place (<https://www.reddit.com/r/place/>).
+This is a script to draw a image onto r/place (<https://www.reddit.com/r/place/>).
 
 ## Features
 
@@ -15,7 +15,7 @@ This is a script to draw a JPG onto r/place (<https://www.reddit.com/r/place/>).
 
 ## Requirements
 
-- [Python 3](https://www.python.org/downloads/)
+- [Latest Version of Python 3](https://www.python.org/downloads/)
 - [A Reddit App Client ID and App Secret Key](https://www.reddit.com/prefs/apps)
 
 ## How to Get App Client ID and App Secret Key
@@ -42,6 +42,11 @@ If you don't want to create a development app for each account, you can add each
 
 Install requirements from 'requirements.txt' file.
 
+### Windows
+```shell
+pip install -r requirements.txt
+```
+### Other OS
 ```shell
 pip3 install -r requirements.txt
 ```
@@ -97,9 +102,10 @@ ENV_C_START='["0"]'
 - ENV_R_START is an array which specifies which x position of the original image to start at while drawing it
 - ENV_C_START is an array which specifies which y position of the original image to start at while drawing it
 
-Note: Multiple fields can be passed into the arrays to spawn a thread for each one.
-
-Change image.jpg to specify what image to draw. One pixel is drawn every 5 minutes and only jpeg images are supported.
+### Notes: 
+- Multiple fields can be passed into the arrays to spawn a thread for each one.
+- Change image.png/.jpg to specify what image to draw. One pixel is drawn every 5 minutes
+- PNG has priority over JPG
 
 ## Run the Script
 
@@ -135,8 +141,6 @@ In this case, the first worker will start drawing from (0, 0) and the second wor
 
 This is useful if you want different threads drawing different parts of the image with different accounts.
 
-If you'd like, you can enable Verbose Mode by editing the Python file. This will output a lot more information, and not neccessarily in the right order, but it is useful for development and debugging.
-
 ## Other Settings
 
 ```text
@@ -147,7 +151,8 @@ ENV_UNVERIFIED_PLACE_FREQUENCY='True'
 - ENV_THREAD_DELAY Adds a delay between starting a new thread. Can be used to avoid ratelimiting
 - ENV_UNVERIFIED_PLACE_FREQUENCY is for setting the pixel place frequency to the unverified account frequency (20 minutes)
 
-
+- Transparency can be achieved by using the RGB value (69, 42, 0) in any part of your image
+- If you'd like, you can enable Verbose Mode by adding --verbose to "python main.py". This will output a lot more information, and not neccessarily in the right order, but it is useful for development and debugging.
 ## Developing
 The nox CI job will run flake8 on the code. You can also do this locally by pip installing nox on your system and running
 `nox` in the repository directory.
