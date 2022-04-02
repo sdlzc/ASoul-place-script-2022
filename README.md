@@ -113,6 +113,34 @@ ENV_C_START='["0"]'
 python3 main.py
 ```
 
+## Ubuntu下的更新和运行
+
+需要screen支持，一般自带 要么sudo apt install screen -y
+
+### 手动更新并启动
+
+~~~shell
+bash update.sh
+~~~
+
+### 设置自动更新重启
+
+```shell
+bash crontab.sh
+```
+
+### 查看运行状态
+
+~~~shell
+# 查看当前运行详情
+screen -r redit
+# 后台运行：Ctrl + a后输入d
+# 查看当前启动的窗口
+screen -ls
+~~~
+
+
+
 ## Multiple Workers
 
 If you want two threads drawing the image at once you could have a setup like this:
