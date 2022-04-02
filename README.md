@@ -48,10 +48,10 @@ ENV_PLACE_PASSWORD='["developer_password"]'
 + 若为apple/google登陆请先重置密码  
 
 ENV_PLACE_APP_CLIENT_ID='["app_client_id"]'  
-+ 图中'personal use script' 上为'app_client_id'.  
++ 下图中'personal use script' 上为'app_client_id'.  
 
 ENV_PLACE_SECRET_KEY='["app_secret_key"]'  
-+ secret 为 'app_secret_key'
++ 下图中secret 为 'app_secret_key'
 
 ENV_DRAW_X_START="959"  
 ENV_DRAW_Y_START="497"  
