@@ -37,27 +37,26 @@ Install requirements from 'requirements.txt' file.
 pip3 install -r requirements.txt
 ```
 
-## Get Started
+## 开始
 
-Create a file called '.env'
+### 以下为自动生成的.env的内容,请自行替换数组内字符串内容
+  
+ENV_PLACE_USERNAME='["developer_username"]' 
++ 即为reddit用户名。  
+ENV_PLACE_PASSWORD='["developer_password"]'  
++ 若为apple/google登陆请先重置密码  
+ENV_PLACE_APP_CLIENT_ID='["app_client_id"]'  
+ENV_PLACE_SECRET_KEY='["app_secret_key"]'  
+ENV_DRAW_X_START="959"  
+ENV_DRAW_Y_START="497"  
+ENV_R_START='["0"]'  
++ 可按照帐号数量依次增加,如"0","1","2"  
+ENV_C_START='["0"]'  
 
-Put in the following content:
-
-```text
-ENV_PLACE_USERNAME='["developer_username"]'
-# 即为reddit用户名。
-ENV_PLACE_PASSWORD='["developer_password"]'
-# 若为apple/google登陆请先重置密码
-ENV_PLACE_APP_CLIENT_ID='["app_client_id"]'
-ENV_PLACE_SECRET_KEY='["app_secret_key"]'
-ENV_DRAW_X_START="x_position_start_integer"
-ENV_DRAW_Y_START="y_position_start_integer"
-ENV_R_START='["0"]'
-ENV_C_START='["0"]'
-```
-![instance](https://github.com/Dabrit/ASoul-place-script-2022/blob/main/image_2022-04-02_21-22-36.png)
 图中'personal use script' 下为'app_client_id'.  
 secret 为 'app_secret_key'  
+![instance](https://github.com/Dabrit/ASoul-place-script-2022/blob/main/image_2022-04-02_21-22-36.png)  
+
 
 - ENV_PLACE_USERNAME is an array of usernames of developer accounts
 - ENV_PLACE_PASSWORD is an array of the passwords of developer accounts
