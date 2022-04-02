@@ -54,7 +54,7 @@ ENV_PLACE_SECRET_KEY='["app_secret_key"]'
 + secret 为 'app_secret_key'
 
 ENV_DRAW_X_START="959"  
-ENV_DRAW_Y_START="497"
+ENV_DRAW_Y_START="497"  
 ENV_R_START='["0"]'  
 + 可按照帐号数量依次增加,如"0","1","2"  
 
