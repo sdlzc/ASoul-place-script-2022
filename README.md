@@ -20,7 +20,13 @@ This is a script to draw a JPG onto r/place (<https://www.reddit.com/r/place/>).
 
 ## How to Get App Client ID and App Secret Key
 
-You need to generate an app client id and app secret key for each account in order to use this script.
+你需要为每个帐号生成App client id 和 app secret key。
+
+### 步骤：
+1. 进入网站[https://www.reddit.com/prefs/apps](https://www.reddit.com/prefs/apps)  
+2. 点击底部的'create (another) app' 按钮  
+3. 选择'script'选项并在 'about url'和'redirect url'处填入任意网站
+
 
 Steps:
 
