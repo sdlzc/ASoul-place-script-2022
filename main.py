@@ -339,9 +339,9 @@ class PlaceClient:
             new_rgb = self.closest_color(target_rgb)
             if pix2[x + self.pixel_x_start, y + self.pixel_y_start] != new_rgb:
                 logging.debug(
-                    f"{pix2[x + self.pixel_x_start, y + self.pixel_y_start]}, {new_rgb}, {new_rgb != (69, 42, 0)}, {pix2[x, y] != new_rgb,}"
+                    f"{pix2[x + self.pixel_x_start, y + self.pixel_y_start]}, {new_rgb}, {target_rgb != (69, 42, 0)}, {pix2[x, y] != new_rgb,}"
                 )
-                if new_rgb != (69, 42, 0):
+                if target_rgb != (69, 42, 0):
                     logging.debug(
                         f"Replacing {pix2[x+self.pixel_x_start, y+self.pixel_y_start]} pixel at: {x+self.pixel_x_start},{y+self.pixel_y_start} with {new_rgb} color"
                     )
