@@ -79,8 +79,6 @@ celerybeat-schedule
 
 new_image.jpg
 
-# dotenv
-.env
 
 # virtualenv
 venv/
