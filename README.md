@@ -42,21 +42,10 @@ Steps:
 
 <img width="383" alt="App ID Screenshot" src="https://user-images.githubusercontent.com/19873803/161398668-0705f122-51d3-4785-8bd9-d6700b586634.png">
 
-## Python Package Requirements
 
-Install requirements from 'requirements.txt' file.
+## MacOSX
+If you are using MacOSX and encounter an SSL_CERTIFICATE error. Please apply the fix detailed https://stackoverflow.com/questions/42098126/mac-osx-python-ssl-sslerror-ssl-certificate-verify-failed-certificate-verify  
 
-### Windows
-
-```shell
-pip install -r requirements.txt
-```
-
-### Other OS
-
-```shell
-pip3 install -r requirements.txt
-```
 
 
 ## 开始
@@ -88,6 +77,8 @@ ENV_C_START='["0"]'
 Move the file 'config_example.json' to config.json
 
 Edit the values to replace with actual credentials and values
+
+Note: Please use https://jsonlint.com/ to check that your JSON file is correctly formatted
 
 ```json
 {
@@ -130,9 +121,22 @@ Edit the values to replace with actual credentials and values
 
 ## Run the Script
 
-```python
-python3 main.py
+### Windows
+
+```shell
+start.bat or startverbose.bat
 ```
+
+### Other OS
+
+```shell
+chmod +x start.sh startverbose.sh
+./start.sh or ./startverbose.sh
+```
+
+### You can get more logs (`DEBUG`) by running the script with `-d` flag
+
+`python3 main.py -d` or `python3 main.py --debug`
 
 ## Multiple Workers
 
@@ -181,6 +185,17 @@ If any JSON decoders errors are found, the `config.json` needs a fix. Make sure 
 
 - Transparency can be achieved by using the RGB value (69, 42, 0) in any part of your image
 - If you'd like, you can enable Verbose Mode by adding --verbose to "python main.py". This will output a lot more information, and not neccessarily in the right order, but it is useful for development and debugging.
+
+## Docker
+
+A dockerfile is provided. Instructions on installing docker are outside the scope of this guide.
+
+To build: After editing your config.json, run `docker build . -t place-bot`. and wait for the image to build
+
+You can now run with 
+
+`docker run place-bot`
+
 
 ## Developing
 
