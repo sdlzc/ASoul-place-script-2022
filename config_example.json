@@ -1,6 +1,6 @@
 {
     "image_path": "image.png",
-    "image_start_coords": [958, 496],
+    "image_start_coords": [959, 497],
     "thread_delay": 2,
     "unverified_place_frequency": "False",
     "workers": {
