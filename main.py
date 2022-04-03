@@ -172,7 +172,7 @@ class PlaceClient:
                     "nextAvailablePixelTimestamp"
                 ]
             )
-            logger.info("Succeeded placing pixel")
+            logger.warning("Succeeded placing pixel")
 
         # THIS COMMENTED CODE LETS YOU DEBUG THREADS FOR TESTING
         # Works perfect with one thread.
@@ -402,7 +402,7 @@ class PlaceClient:
                 if (
                     update_str != new_update_str
                     and time_until_next_draw < 1000000
-                    and time_until_next_draw % 10 == 0
+                    and time_until_next_draw % 20 == 0
                 ):
                     update_str = new_update_str
                     logger.info("Thread #{} :: {}", index, update_str)
@@ -464,8 +464,9 @@ class PlaceClient:
                                 )
                                 exit(1)
                         except:
-                            logger.info(
-                                "An error occurred when get access token. Retry after 5 seconds"
+                            logger.warning(
+                                "An error occurred when get access token for {}. Retry after 5 seconds",
+                                name
                             )
                             time.sleep(5)
                         else:
