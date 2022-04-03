@@ -24,5 +24,7 @@ python310Packages.python-dotenv
 python310Packages.urllib3
 python310Packages.pillow
 python310Packages.websocket-client
+python310Packages.loguru
+python310Packages.click
 ])
 ).env
