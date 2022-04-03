@@ -397,10 +397,10 @@ class PlaceClient:
                     f"{time_until_next_draw} seconds until next pixel is drawn"
                 )
 
-                if update_str != new_update_str and time_until_next_draw % 10 == 0:
+                if update_str != new_update_str and time_until_next_draw < 1000000 and time_until_next_draw % 10 == 0:
                     update_str = new_update_str
+                    logger.info("Thread #{} :: {}", index, update_str)
 
-                logger.info("Thread #{} :: {}", index, update_str)
 
                 # refresh access token if necessary
                 if (
