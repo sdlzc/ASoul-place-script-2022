@@ -12,6 +12,8 @@ config.json
 # C extensions
 *.so
 
+.env
+
 # Distribution / packaging
 .Python
 env/
