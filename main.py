@@ -319,8 +319,12 @@ class PlaceClient:
                 pix2 = boardimg.convert("RGB").load()
                 y = 0
 
-            logger.info(f"start at point({self.pixel_x_start},{self.pixel_y_start}, offset ({x},{y})")
-            logger.info(f"real point({x + self.pixel_x_start},{y + self.pixel_y_start})")
+            logger.info(
+                f"start at point({self.pixel_x_start},{self.pixel_y_start}, offset ({x},{y})"
+            )
+            logger.info(
+                f"real point({x + self.pixel_x_start},{y + self.pixel_y_start})"
+            )
             logger.debug("{}, {}", x + self.pixel_x_start, y + self.pixel_y_start)
             logger.debug(
                 "{}, {}, boardimg, {}, {}", x, y, self.image_size[0], self.image_size[1]
@@ -439,13 +443,15 @@ class PlaceClient:
                                 "https://ssl.reddit.com/api/v1/access_token",
                                 data=data,
                                 auth=HTTPBasicAuth(app_client_id, secret_key),
-                                headers={"User-agent": f"placebot{random.randint(1, 100000)}"},
+                                headers={
+                                    "User-agent": f"placebot{random.randint(1, 100000)}"
+                                },
                             )
 
                             logger.debug("Received response: {}", r.text)
 
                             response_data = r.json()
-                            
+
                             if "error" in response_data:
                                 logger.debug(
                                     "Response data: {}",
@@ -453,7 +459,9 @@ class PlaceClient:
                                 )
                                 exit(1)
                         except:
-                            logger.info("An error occurred when get access token. Retry after 5 seconds")
+                            logger.info(
+                                "An error occurred when get access token. Retry after 5 seconds"
+                            )
                             time.sleep(5)
                         else:
                             break
