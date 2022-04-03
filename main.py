@@ -466,7 +466,7 @@ class PlaceClient:
                         except:
                             logger.warning(
                                 "An error occurred when get access token for {}. Retry after 5 seconds",
-                                name
+                                name,
                             )
                             time.sleep(5)
                         else:
